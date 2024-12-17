@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        width: 100%;
+        height: 60px;
+        /* border: 1px solid; */
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .a-1{
+        width: 18%;
+        height: 60px;
+        /* border: 1px solid; */
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+    }
+    .a-2{
+        width: 60%;
+        height: 60px;
+        /* border: 1px solid; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .a-3{
+        width: 18%;
+        height: 60px;
+        /* border: 1px solid; */
+    }
+    .a-1 h1{
+        font-style: italic;
+        font-weight: bold;
+        font-size: 30px;
+        align-items: center;
+        
+    }
+    .a-1 h1:hover{
+        color: #0056b3;
+    }
+    
+input[type="text"] {
+  width: 100%;
+  max-width: 400px; 
+  padding: 10px 15px;
+  font-size: 16px; 
+  border: 2px solid #ccc;
+  border-radius: 5px; 
+  outline: none; 
+  transition: border-color 0.3s ease; 
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+
+input[type="text"]::placeholder {
+  color: #888; 
+  font-style: italic; 
+  opacity: 0.8; 
+}
+
+input[type="text"]:hover {
+  border-color: #555;
+}
+
+.a-3 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    height: 40px;
+    /* width: 100px; */
+}
+
+.a-3 button {
+    padding: 8px 16px;
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+
+.contain{
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid; */
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+li {
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; 
+    font-weight: bold; 
+    padding: 8px 12px;
+    border: 1px solid transparent;   
+    border-radius: 4px; 
+    transition: all 0.3s ease; 
+}
+.maen{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+</style>
+<body>
+   <form action="" enctype="multipart/form-data">
+    <div class="main">
+        <div class="a-1">
+            <h1>Movie show</h1>
+        </div>
+        <div class="a-2">
+            <input type="text" placeholder="Serch for Movies, Events, Plays, Sports and Active">
+        </div>
+        <div class="a-3">
+            <button><a href="/add">Add Data</a></button>
+        </div>
+    </div>
+
+        <div class="contain">
+            <ul>
+                <li>
+                    <a href="">Movies</a>
+                    <a href="">Stream</a>
+                    <a href="">Event</a>
+                    <a href="">Plays</a>
+                    <a href="">Shorts</a>
+                    <a href="">Actvities</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="maen">
+
+            <% data.map((e,i)=>{ %>
+                <img src="<%=e.image%>" width="20%" alt="" srcset="">
+                <p><%=e.moviename%></p>
+                <p><%=e.movietitle%></p>
+                <p><%=e.releasedate%></p>
+                <p><%=e.description%></p>
+                <p><%=e.director%></p>
+                <p><%=e.price%></p>
+                <p><%=e.village%></p>
+
+                <a href="/edit?id=<%= e.id %>" class="edit-btn">Edit</a>
+                <a href="/delete?id=<%= e.id %>" class="delete-btn">Delete</a>
+
+
+                
+              <% }) %>
+
+
+        </div>
+
+     
+    
+
+
+   </form>
+</body>
+</html>

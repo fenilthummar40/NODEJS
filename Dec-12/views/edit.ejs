@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Endit</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Styling */
+.box1 {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* Form Inputs */
+.box1 input[type="text"],
+.box1 input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.box1 input[type="text"]:focus,
+.box1 input[type="file"]:focus {
+  border-color: #007bff;
+}
+
+/* File Input Styling */
+#img {
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Submit Button */
+.box1 button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.box1 button:hover {
+  background-color: #0056b3;
+}
+
+/* Placeholder Styling */
+.box1 input::placeholder {
+  color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .box1 {
+    padding: 20px;
+  }
+
+  .box1 input,
+  .box1 button {
+    font-size: 14px;
+  }
+}
+</style>
+<body>
+    <div class="tital">
+        <h1>Edit to movie</h1>
+    </div>
+    
+    <div class="box1">
+        <form action="/updateData" enctype="multipart/form-data" method="post">
+            
+            <input type="text" name="id" value="<%=data.id%>" hidden>
+
+            <input type="text" placeholder="Movie Name" name="moviename" value="<%=data.moviename%>" required>
+            <input type="text" placeholder="Movie tital" name="movietitle" value="<%=data.movietitle%>" required>
+            <input type="date" placeholder="Movie data" name="releasedate" value="<%=data.releasedate%>" required>
+            <input type="text" placeholder="Movie description" name="description" value="<%=data.description%>" required>
+            <input type="text" placeholder="Movie director" name="director" value="<%=data.director%>" required>
+            <input type="text" placeholder="Movie price" name="price" value="<%=data.price%>" required>
+            <input type="text" placeholder="Movie village" name="village" value="<%=data.village%>" required>
+            <input type="file" name="image" id="img">
+
+            <button type="submit">update</button>
+        </form>
+    </div>
+
+
+
+</body>
+</html>
