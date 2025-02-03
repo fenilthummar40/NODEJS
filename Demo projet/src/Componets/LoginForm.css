@@ -1,0 +1,76 @@
+
+   .l-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Login Form Container */
+.main-3 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Form Title */
+.l-111 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Input Fields */
+.la-1 {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.la-11 {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.la-111 {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Signup Link */
+.laa-1 {
+    margin: 10px 0;
+}
+
+.laa-1 a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.laa-1 a:hover {
+    text-decoration: underline;
+}
+
+/* Login Button */
+.laa-11 {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.laa-11:hover {
+    background-color: #0056b3;
+}
